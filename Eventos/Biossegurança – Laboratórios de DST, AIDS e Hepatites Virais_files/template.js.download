@@ -1,0 +1,146 @@
+//Codigo JS para preenchimento do endereço está em administrator/index.php?option=com_fss&controller=field&task=edit&cid[0]=7&Itemid=252
+
+jQuery(document).ready(function(){jQuery.getScript('/templates/telelab2014-home/js/cidadesestados.js',function(){new dgCidadesEstados({estado:document.getElementById('cb_estado'),cidade:document.getElementById('cb_municipio'),change:true})}); 
+
+jQuery( "#buttonPopUp" ).click(function() {
+        document.getElementById("overlayPopUp").style.display="none";
+        document.getElementById("dailycomplete").style.display="none";
+});
+
+jQuery(function(jQuery){jQuery("#cb_cpf").mask("999.999.999-99"); 
+});
+
+jQuery("#cb_cpf").focusout(function () {
+	function validarCPF(cpf) {
+	'use strict';
+
+	if (/^\d{3}\.\d{3}\.\d{3}-\d{2}$/.test(cpf)) {
+
+	var dig = cpf.split('-')[1],
+	num = cpf.split('-')[0]
+	.match(/\d/g)
+	.reverse();
+
+	var v1 = 0, v2 = 0;
+
+	for (var i = 0; i < 9; i++) {
+	v1 = v1 + num[i] * (9 - (i % 10));
+	v2 = v2 + num[i] * (9 - ((i + 1) % 10));
+	}
+
+	v1 = (v1 % 11) % 10;
+	v2 = ((v2 + v1 * 9) % 11) % 10;
+
+	if (v1 + '' + v2 === dig) {
+		return true;
+	} else {
+		return false;
+	}
+	} else {
+		return false;
+	}
+	}
+	if(!(validarCPF(document.getElementById("cb_cpf").value))){
+		alert("CPF inválido");
+		document.getElementByID("cb_cpf").value = "";
+	}
+    });
+
+var idAtuacaoLiberal='cbfr_79'; 
+var idAtuacaoSUS='cbfr_77'; 
+var idPais='cbfr_82'; 
+var idAreaFormacao='cbfr_74'; 
+var idEstado='cbfr_81'; 
+var idCidade='cbfr_61'; 
+var idOutraOcupacao='cbfr_83'; 
+var idOutraArea='cbfr_84'; 
+var idCpf='cbfr_54'; 
+if(document.getElementById('cb_tipodecadastro').value=="Profissional da saúde"){document.getElementById('cb_atuacaoliberal').value="Outro"; 
+document.getElementById(idAtuacaoLiberal).style.display="none"; 
+document.getElementById(idPais).style.display="none"; 
+document.getElementById(idOutraOcupacao).style.display="none"; 
+document.getElementById('cb_pais').value="BRASIL"; 
+document.getElementById('cb_estado').value=""; 
+}if(document.getElementById('cb_tipodecadastro').value=="Estudante"){document.getElementById('cb_atuacaoliberal').value="Outro"; 
+document.getElementById('cb_atuacaosus').value="Outro"; 
+document.getElementById(idAtuacaoSUS).style.display="none"; 
+document.getElementById(idAtuacaoLiberal).style.display="none"; 
+document.getElementById(idOutraOcupacao).style.display="none"; 
+}if(document.getElementById('cb_tipodecadastro').value=="Professor"){document.getElementById('cb_atuacaoliberal').value="Outro"; 
+document.getElementById('cb_atuacaosus').value="Outro"; 
+document.getElementById(idAtuacaoLiberal).style.display="none"; 
+document.getElementById(idAtuacaoSUS).style.display="none"; 
+document.getElementById(idOutraOcupacao).style.display="none"; 
+}if(document.getElementById('cb_tipodecadastro').value=="Profissional liberal"){document.getElementById('cb_atuacaoliberal').value="Outro"; 
+document.getElementById('cb_atuacaosus').value="Outro"; 
+document.getElementById(idAtuacaoSUS).style.display="none"; 
+document.getElementById(idAtuacaoLiberal).style.display="none"; 
+document.getElementById(idOutraOcupacao).style.display="none"; 
+}if(document.getElementById('cb_tipodecadastro').value=="Outros interessados"){document.getElementById('cb_areadeformacao').value="Outro"; 
+document.getElementById('cb_atuacaosus').value="Outro"; 
+document.getElementById(idAtuacaoSUS).style.display="none"; 
+document.getElementById(idAtuacaoLiberal).style.display="none"; 
+}if(document.getElementById('cb_pais').value!="BRASIL"){document.getElementById(idEstado).style.display="none"; 
+document.getElementById(idCidade).style.display="none"; 
+document.getElementById('cb_estado').value="XX"; 
+document.getElementById(idCpf).style.display="none"; 
+}else{document.getElementById(idEstado).style.display=""; 
+document.getElementById(idCidade).style.display=""; 
+document.getElementById(idCpf).style.display=""; 
+}if((document.getElementById('cb_areadeformacao').value=="Outro")||(document.getElementById('cb_atuacaoliberal').value=="Outro")){document.getElementById(idOutraArea).style.display=""; 
+}else{document.getElementById(idOutraArea).style.display="none"; 
+}document.getElementById("cb_pais").onchange=function(){if(document.getElementById('cb_pais').value!="BRASIL"){document.getElementById(idEstado).style.display="none"; 
+document.getElementById(idCidade).style.display="none"; 
+document.getElementById('cb_estado').value="XX"; 
+document.getElementById(idCpf).style.display="none"; 
+}else{document.getElementById(idCidade).style.display=""; 
+document.getElementById(idEstado).style.display=""; 
+document.getElementById('cb_estado').value="AC"; 
+document.getElementById(idCpf).style.display=""; 
+}}
+document.getElementById("cb_areadeformacao").onchange=function(){if(document.getElementById('cb_areadeformacao').value!="Outro"){document.getElementById(idOutraArea).style.display="none"; 
+}else{document.getElementById(idOutraArea).style.display=""; 
+}}
+document.getElementById("cb_atuacaoliberal").onchange=function(){if(document.getElementById('cb_atuacaoliberal').value!="Outro"){document.getElementById(idOutraArea).style.display="none"; 
+}else{document.getElementById(idOutraArea).style.display=""; 
+}}
+document.getElementById("cb_tipodecadastro").onchange=function(){if(document.getElementById('cb_tipodecadastro').value=="Profissional da saúde"){document.getElementById('cb_atuacaoliberal').value="Outro"; 
+document.getElementById(idAtuacaoLiberal).style.display="none"; 
+document.getElementById(idPais).style.display="none"; 
+document.getElementById(idOutraOcupacao).style.display="none"; 
+document.getElementById('cb_pais').value="BRASIL"; 
+document.getElementById('cb_estado').value=""; 
+document.getElementById(idCidade).style.display=""; 
+document.getElementById(idEstado).style.display=""; 
+document.getElementById(idAreaFormacao).style.display=""; 
+document.getElementById(idAtuacaoSUS).style.display=""; 
+}if(document.getElementById('cb_tipodecadastro').value=="Estudante"){document.getElementById('cb_atuacaoliberal').value="Outro"; 
+document.getElementById('cb_atuacaosus').value="Outro"; 
+document.getElementById(idAtuacaoSUS).style.display="none"; 
+document.getElementById(idAtuacaoLiberal).style.display="none"; 
+document.getElementById(idOutraOcupacao).style.display="none"; 
+document.getElementById(idPais).style.display=""; 
+document.getElementById(idAreaFormacao).style.display=""; 
+}if(document.getElementById('cb_tipodecadastro').value=="Professor"){document.getElementById('cb_atuacaoliberal').value="Outro"; 
+document.getElementById('cb_atuacaosus').value="Outro"; 
+document.getElementById(idAtuacaoLiberal).style.display="none"; 
+document.getElementById(idAtuacaoSUS).style.display="none"; 
+document.getElementById(idOutraOcupacao).style.display="none"; 
+document.getElementById(idPais).style.display=""; 
+document.getElementById(idAreaFormacao).style.display=""; 
+}if(document.getElementById('cb_tipodecadastro').value=="Profissional liberal"){document.getElementById('cb_atuacaoliberal').value="Outro"; 
+document.getElementById('cb_atuacaosus').value="Outro"; 
+document.getElementById(idAtuacaoSUS).style.display="none"; 
+document.getElementById(idAtuacaoLiberal).style.display="none"; 
+document.getElementById(idOutraOcupacao).style.display="none"; 
+document.getElementById(idAreaFormacao).style.display=""; 
+document.getElementById(idPais).style.display=""; 
+}if(document.getElementById('cb_tipodecadastro').value=="Outros interessados"){document.getElementById('cb_areadeformacao').value="Outro"; 
+document.getElementById('cb_atuacaosus').value="Outro"; 
+document.getElementById(idAreaFormacao).style.display="none"; 
+document.getElementById(idAtuacaoSUS).style.display="none"; 
+document.getElementById(idAtuacaoLiberal).style.display=""; 
+document.getElementById(idPais).style.display=""; 
+document.getElementById(idOutraOcupacao).style.display=""; 
+}}}); 
+

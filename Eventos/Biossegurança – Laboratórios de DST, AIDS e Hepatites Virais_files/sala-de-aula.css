@@ -1,0 +1,65 @@
+
+.icon-chevron-left {
+position: absolute !important;
+margin-top: 3px !important;
+}
+video{height:39vw !important;}
+h4.titulo-certificacao:before{content:url('http://telelab.aids.gov.br/images/error.png');}
+h4.texto-certificacao{margin-bottom:0.5em;font-weight:bold;color:#333;}
+.clear{clear:both;margin:0;padding:0;width:0;height:0;}
+body{margin:0;padding:0;font-family:Arial,sans-serif;background:#000 !important;}
+.cabecalho{background:#fff;}
+.cabecalho .logo{float:left;margin:6px;}
+.cabecalho img{max-width: 113px !important;}
+.cabecalho .nav-collapse{float:right;}
+.cabecalho .nav-collapse > ul > li{float:left;list-style:none;margin-right:10px;}
+.cabecalho .nav-collapse li a{color:#000;text-transform:uppercase;font-size:10px;text-decoration:none;}
+.quadro-negro{margin:0 0 0 0.5%;float:left;width:75%;display:block;}
+.sidebar{display:block;float:right;width:24%;margin:0px;background:#fff;}
+.cabecalho-aula{padding:10px 0px 0px 10px;margin:0;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
+.cabecalho-aula h1,
+.cabecalho-aula h2{margin:0;padding:0;margin-top:-8px;}
+.cabecalho-aula h1{font-size:24px;color:#fff;}
+.cabecalho-aula h2{font-size:20px;color:#fff;}
+.conteudo-aula iframe{width:100% !important;}
+#tabs-container > ul{margin:0;padding:0;list-style:none;}
+#tabs-container > ul > li{background:#000;float:left;width:33.3%;}
+#tabs-container > ul > li > a{display:block;width:100%;font-size:9px;text-transform:uppercase;color:#fff;padding-left:15%;text-decoration:none;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;min-height:65px;padding-top:21px;text-align:center;}
+#tabs-container .aulas a{background:#008B00 url(../images/aulas.png) no-repeat 10% 50%;border-top-left-radius:10px;}
+#tabs-container .biblioteca a{background:#1874CD url(../images/material.png) no-repeat 10% 50%;}
+#tabs-container .certificacao a{background:#FFD700 url(../images/certificacao.png) no-repeat 8% 50%;color:#000;}
+#tabs .tab-content{padding:0 !important;margin:0;overflow:auto;}
+#tabs-container .tab-content > ul > li:last-child{border:none;}
+#tabs-container .tab-content > ul > li:hover{background:#f2f2f2;}
+#tabs-3 ul > li{padding:10px !important;line-height:24px;}
+#tabs-3 ul > li:hover{background:none !important;}
+#tabs-3 ul > li a{text-decoration:underline !important;padding:0 !important;margin-top:10px;font-weight:bold;font-size:16px !important;}
+#tabs .aba > ul > li > a{padding:10px;min-height:14px;text-decoration:none;font-size:12px;color:#555;margin-right:80px;display:block;}
+#tab-1{background:#008B00;}
+#tab-2{background:#1874CD;}
+#tab-3{background:#ffd700;}
+#tabs-container .tab-content .abrir{position:absolute;right:0;top:10px;padding-top:20px;float:right;font-size:8px;text-transform:uppercase;text-align:center;width:60px;background:url(anexos.png) no-repeat 50% 0px;cursor:pointer;}
+#tabs-container .tab-content .anexos{margin:0;padding:5px 0;}
+#tabs-container .tab-content .anexos li{padding:7px 7px 7px 15px;list-style-type:square;list-style-position:inside;color:#666;font-size:10px;font-weight:bold;border-top:1px solid #ddd;}
+#tabs-container .tab-content .anexos li a{color:#666;}
+.active{display:block;}
+.tabs-menu{clear:both;}
+.tabs-menu li{}
+.tabs-menu li.current{position:relative;z-index:5;}
+.tabs-menu li a{text-transform:uppercase;color:#fff;text-decoration:none;}
+.tabs-menu .current a{}
+.tab{float:left;width:100%;}
+.tab-content{width:100%;display:none;}
+.tab-content > ul{margin:5px;background:#fff;list-style:none;border-radius:3px;}
+.tab-content > ul > li{padding:10px;margin:0;border-bottom:1px solid #eee;}
+#tab-1{display:block;}
+.trocar-player{display:block;width:100%;text-align:center;font-weight:bold;color:#fff;height:40px;}
+li.orientacao:hover{background:#fff !important;}
+li.orientacao .certificado{margin-bottom:0 !important;}
+@media (min-width:690px) and (max-width:979px){#tabs-container > ul > li > a{font-size:17px !important;padding-left:12% !important;padding-top:23px !important;letter-spacing:2px;}
+}
+@media only screen and (min-width:980px) and (max-width:1400px){#tabs-container .aulas a{background:url('../images/aulas.png') no-repeat scroll 50% 23% #008B00 !important;padding:35px 0px 0px;}
+#tabs-container .biblioteca a{background:url('../images/material.png') no-repeat scroll 50% 23% #1874CD !important;padding:35px 0px 0px;}
+#tabs-container .certificacao a{background:url('../images/certificacao.png') no-repeat scroll 50% 23% #FFD700 !important;padding:35px 0px 0px;}}
+@media (min-width:1401px){#tabs-container > ul > li > a{font-size:0.75vmax !important;}
+}
